@@ -3,16 +3,19 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "start": "react-native start",
+    "start:dev": "start npm run start && start npm run android",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
-    "start": "react-native start && react-native run-android",
+    "rebuild-android": "./gradlew clean",
     "test": "jest",
-    "lint": "eslint --ext .jsx,.js src .",
-    "lintq": "eslint ."
+    "lint": "eslint --ext .jsx,.js src ."
   },
   "dependencies": {
     "react": "16.9.0",
-    "react-native": "0.61.4"
+    "react-native": "0.61.4",
+    "react-native-linear-gradient": "^2.5.6",
+    "styled-components": "^4.4.1"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",

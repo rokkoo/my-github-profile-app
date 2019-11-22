@@ -1,68 +1,28 @@
-import React from 'react';
-import {SafeAreaView, StyleSheet, ScrollView, View, Text} from 'react-native';
+import React from "react";
+import { ScrollView, Dimensions } from "react-native";
+import styled from "styled-components";
 
-import {Colors} from 'react-native/Libraries/NewAppScreen';
+// Components
+import Header from "./src/components/header";
 
-import ImageView from './nativeModules/imageView';
+import { Colors } from "./theme";
+
+const { width: screenWidth, height: screenHeight } = Dimensions.get("window");
+
+// Styles
+const Container = styled.SafeAreaView`
+  flex: 1;
+  width: ${screenWidth};
+  background-color: ${Colors.dark};
+`;
 
 const App = () => {
-  ImageView.createImageView(
-    'https://avatars2.githubusercontent.com/u/25004016?v=4',
-  );
-
   return (
-    <View>
-      <SafeAreaView>
-        <ScrollView
-          contentInsetAdjustmentBehavior="automatic"
-          style={styles.scrollView}>
-          <View>
-            <Text>test</Text>
-            <ImageView style={{flex: 1, width: '100%', heigth: '100%'}} />
-          </View>
-        </ScrollView>
-      </SafeAreaView>
-    </View>
+    <Container>
+      <Header username={"alfonso"} />
+      <ScrollView contentInsetAdjustmentBehavior="automatic"></ScrollView>
+    </Container>
   );
 };
-
-const styles = StyleSheet.create({
-  scrollView: {
-    backgroundColor: Colors.lighter,
-  },
-  engine: {
-    position: 'absolute',
-    right: 0,
-  },
-  body: {
-    backgroundColor: Colors.white,
-  },
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-    color: Colors.black,
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-    color: Colors.dark,
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-  footer: {
-    color: Colors.dark,
-    fontSize: 12,
-    fontWeight: '600',
-    padding: 4,
-    paddingRight: 12,
-    textAlign: 'right',
-  },
-});
 
 export default App;

@@ -1,14 +1,15 @@
-import {requireNativeComponent, ViewPropTypes} from 'react-native';
-import PropTypes from 'prop-types';
+import { requireNativeComponent } from "react-native";
+import PropTypes from "prop-types";
 
-const MODULE_NAME = 'ImageModule';
+const MODULE_NAME = "ImageModule";
+
+const ImageView = props => <ImageModule {...props} />;
 
 const viewProps = {
   name: MODULE_NAME,
-  propTypes: {
-    url: PropTypes.string,
-    ...ViewPropTypes,
-  },
+  url: PropTypes.string
 };
 
-module.exports = requireNativeComponent(MODULE_NAME, viewProps);
+const ImageModule = requireNativeComponent(MODULE_NAME, viewProps);
+
+module.exports = ImageModule;

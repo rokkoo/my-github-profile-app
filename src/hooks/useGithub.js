@@ -11,8 +11,14 @@ const useGithub = () => {
     (async () => {
       const data = await fetch(PROFILE_END_POINT);
       const jsonData = await data.json();
-      setState(jsonData);
-      setOwner(jsonData[0].owner);
+      const sortedByDate = jsonData.sort((current, next) => {
+        const firstDate = new Date(current.created_at);
+        const nextDate = new Date(next.created_at);
+        return nextDate - firstDate; // ASC
+      });
+
+      setState(sortedByDate);
+      setOwner(sortedByDate[0].owner);
       setIsloaded(true);
     })();
   }, []);

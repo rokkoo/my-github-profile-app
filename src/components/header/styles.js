@@ -15,7 +15,7 @@ export const Container = styled.View`
   align-items: center;
   padding-left: 10;
   z-index: 999;
-  background-color: ${Colors.ternary};
+  background-color: ${props => props.theme.colors.headerBackground};
   shadow-color: white;
   shadow-opacity: 0.8;
   elevation: 8;
@@ -31,7 +31,6 @@ export const AvatarWrapper = styled.View`
   height: ${avatarSize.height};
   border-radius: 80;
   overflow: hidden;
-  border-color: ${Colors.dark};
   margin-right: 10;
 `;
 
@@ -42,7 +41,7 @@ export const TextWrapper = styled.View`
 `;
 
 export const Text = styled.Text`
-  color: ${Colors.light};
+  color: ${props => props.theme.colors.textColor};
   font-size: 25;
   font-weight: bold;
   text-transform: capitalize;
@@ -54,4 +53,9 @@ export const Background = styled(LinearGradient)`
   left: 0;
   right: 0;
   bottom: 0;
+`;
+
+export const IconWrapper = styled.View`
+  color: red;
+  background-color: red;
 `;

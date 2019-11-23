@@ -3,7 +3,7 @@ import { FlatList, Linking } from "react-native";
 import moment from "moment";
 
 // Theme
-import { languagesColors } from "../../../theme";
+import { languagesColors } from "../../../theme/constants";
 
 // Styles
 import { ItemWrapper, Text, Touchable } from "./styles";

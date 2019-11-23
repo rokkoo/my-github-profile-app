@@ -2,10 +2,8 @@ import styled from "styled-components/native";
 import LinearGradient from "react-native-linear-gradient";
 import { ImageView } from "../../../nativeModules";
 
-// Theme
-import { Colors } from "../../../theme";
-
-const avatarSize = { width: 60, height: 60 };
+// Avatar size
+import { avatarSize } from "../../../theme/constants";
 
 // Styles
 export const Container = styled.View`

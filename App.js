@@ -1,12 +1,9 @@
 import React from "react";
 import { Dimensions } from "react-native";
-import styled, { ThemeProvider } from "styled-components/native";
+import styled from "styled-components/native";
 
 // Context
 import { AppProvider } from "./context/AppContext";
-
-// Theme
-import { Colors } from "./theme";
 
 // Components
 import Header from "./src/components/header";

@@ -8,9 +8,11 @@
 # TODOS
 
 - [ ] At least one Native Module integration between android and Javascript.
+  - [x] ImageView UI native componente
+  - [ ] Shared preferences system native componente
 - [x] Consume github API (my profile).
 - [ ] Make UI.
-  - [ ] Show list order by time ASC
+  - [x] Show list order by time ASC
   - [ ] ADD filter, to filter by language
 - [ ] Clean code.
 - [ ] ADD Proptypes

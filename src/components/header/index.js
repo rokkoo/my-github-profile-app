@@ -16,7 +16,7 @@ const height = 100;
 // Styles
 const Container = styled.View`
   width: ${screenWidth};
-  height: ${(avatarSize.height * 2) / 2 - 10};
+  height: ${(avatarSize.height * 2) / 2 - 5};
   align-items: center;
   /* background-color: tomato; */
   padding-top: 10;
@@ -31,7 +31,9 @@ const AvatarWrapper = styled.View`
 
 const Text = styled.Text`
   color: ${Colors.light};
-  font-size: 20;
+  font-size: 25;
+  font-weight: bold;
+  text-transform: capitalize;
 `;
 
 const Background = styled(LinearGradient)`

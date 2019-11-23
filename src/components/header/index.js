@@ -1,21 +1,25 @@
 import React from "react";
-import Icon from "react-native-vector-icons/MaterialCommunityIcons";
 
-// Theme
-import { Colors } from "../../../theme";
+// Components
+import Icon from "../themeIcon";
+
+// Hooks
+import useAppContext from "../../hooks/useAppContext";
 
 // Styles
 import { TextWrapper, Text, Container, AvatarWrapper, Image } from "./styles";
 
-const Header = ({ username }) => {
+const Header = ({ username, imageUrl }) => {
+  const { toggleMode, state } = useAppContext();
+
   return (
     <Container>
       <AvatarWrapper>
-        <Image url="https://avatars2.githubusercontent.com/u/25004016?v=4" />
+        <Image url={imageUrl} />
       </AvatarWrapper>
       <TextWrapper>
         <Text>{username}</Text>
-        <Icon name="theme-light-dark" size={35} color={Colors.light} />
+        <Icon onPress={toggleMode} mode={state.mode} />
       </TextWrapper>
     </Container>
   );

@@ -1,7 +1,8 @@
 # USAGE
 
 ```javascript
-    npm start // start app
+    npm start // start the react packager/server
+    npm start:dev // start start the react packager/server & start android simulator
 ```
 
 # TODOS
@@ -12,3 +13,4 @@
   - [ ] Show list order by time ASC
   - [ ] ADD filter, to filter by language
 - [ ] Clean code.
+- [ ] ADD Proptypes

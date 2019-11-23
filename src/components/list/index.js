@@ -25,7 +25,11 @@ const RenderItem = ({ item }) => {
     <Touchable onPress={() => Linking.openURL(item.html_url)}>
       <Wrapper language={item.language}>
         <Text title>{item.name}</Text>
-        <Text>{moment(item.created_at).format("YYYY-MM-DD")}</Text>
+        <Text>
+          {moment(item.created_at)
+            .subtract(10, "days")
+            .calendar()}
+        </Text>
       </Wrapper>
     </Touchable>
   );

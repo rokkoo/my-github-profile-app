@@ -1,3 +1,4 @@
 import ImageView from "./imageView";
+import CardView from "./cardView";
 
-export { ImageView };
+export { ImageView, CardView };

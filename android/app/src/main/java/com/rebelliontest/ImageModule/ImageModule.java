@@ -1,5 +1,6 @@
 package com.rebelliontest.ImageModule;
 
+import android.view.WindowManager;
 import android.widget.ImageView;
 
 import com.facebook.react.uimanager.SimpleViewManager;
@@ -28,6 +29,4 @@ public class ImageModule extends SimpleViewManager<ImageView> {
     public void setImageUrl(ImageView imageView, String url){
         Picasso.get().load(url).into(imageView);
     }
-
-
 }

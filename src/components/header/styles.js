@@ -15,6 +15,10 @@ export const Container = styled.View`
   align-items: center;
   padding-left: 10;
   z-index: 999;
+  background-color: ${Colors.ternary};
+  shadow-color: white;
+  shadow-opacity: 0.8;
+  elevation: 8;
 `;
 
 export const Image = styled(ImageView)`

@@ -10,7 +10,7 @@ import useAppContext from "../../hooks/useAppContext";
 import { TextWrapper, Text, Container, AvatarWrapper, Image } from "./styles";
 
 const Header = ({ username, imageUrl }) => {
-  const { toggleMode, state } = useAppContext();
+  const { toggleMode, themeMode } = useAppContext();
 
   return (
     <Container>
@@ -19,7 +19,7 @@ const Header = ({ username, imageUrl }) => {
       </AvatarWrapper>
       <TextWrapper>
         <Text>{username}</Text>
-        <Icon onPress={toggleMode} mode={state.mode} />
+        <Icon onPress={toggleMode} mode={themeMode} />
       </TextWrapper>
     </Container>
   );

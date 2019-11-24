@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ThemeProvider } from "styled-components";
 
 // Themes
@@ -11,10 +11,12 @@ import { theme } from "../theme/constants";
 const AppContext = React.createContext([{}, () => {}]);
 
 const AppProvider = ({ children }) => {
-  const [state, setState] = useState({ mode: theme.lightThemeName });
+  const [state, setState] = useState({ themeMode: theme.lightThemeName });
 
   return (
-    <ThemeProvider theme={state.mode === theme.lightThemeName ? light : dark}>
+    <ThemeProvider
+      theme={state.themeMode === theme.lightThemeName ? light : dark}
+    >
       <AppContext.Provider value={[state, setState]}>
         {children}
       </AppContext.Provider>

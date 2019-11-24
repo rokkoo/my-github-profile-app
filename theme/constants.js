@@ -1,4 +1,5 @@
 export const theme = {
+  preferenceName: "theme",
   lightThemeName: "light",
   darkTheName: "dark"
 };

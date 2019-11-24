@@ -9,12 +9,20 @@ import dark from "../../../theme/dark";
 import { theme } from "../../../theme/constants";
 
 export default TheIcon = ({ mode, onPress }) => {
-  const color =
+  const backgroundColor =
     mode === theme.lightThemeName
       ? dark.colors.background
       : light.colors.background;
 
+  const rotateZ = mode === theme.lightThemeName ? "180deg" : "0deg";
+
   return (
-    <Icon name="theme-light-dark" color={color} size={35} onPress={onPress} />
+    <Icon
+      style={{ transform: [{ rotateZ }] }}
+      name="theme-light-dark"
+      color={backgroundColor}
+      size={35}
+      onPress={onPress}
+    />
   );
 };

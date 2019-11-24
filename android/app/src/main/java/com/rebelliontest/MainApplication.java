@@ -29,6 +29,7 @@ public class MainApplication extends Application implements ReactApplication {
           // packages.add(new MyReactNativePackage());
             packages.add(new ImageViewPackage());
             packages.add(new CardPackage());
+            packages.add(new SharedPreferencePackage());
           return packages;
         }
 

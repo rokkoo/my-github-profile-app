@@ -40,9 +40,10 @@ export const TextWrapper = styled.View`
 
 export const Text = styled.Text`
   color: ${props => props.theme.colors.textColor};
-  font-size: 25;
+  font-size: 22;
   font-weight: bold;
   text-transform: capitalize;
+  align-self: center;
 `;
 
 export const Background = styled(LinearGradient)`

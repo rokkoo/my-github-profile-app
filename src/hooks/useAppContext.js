@@ -26,7 +26,7 @@ const useAppContext = () => {
   };
 
   // Get theme shared preference
-  // If something wrong trigger toggleTheme
+  // If something wrong trigger toggleTheme to storage theme
   useEffect(() => {
     SharedPreference.getSharedPreference(
       theme.preferenceName,

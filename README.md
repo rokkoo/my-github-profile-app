@@ -7,6 +7,8 @@ Each repositori is linked to his repo url so if you tab in it will open your bro
 
 The application use two custom native modules, this two modules only runs in android for now.
 
+![Preview](./sources/example.gif)
+
 # Usage
 
 ```javascript

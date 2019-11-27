@@ -35,7 +35,7 @@ const App = () => {
   return isLoaded ? (
     <AppProvider>
       <Container>
-        <Header username="owner" imageUrl={owner.avatar_url} />
+        <Header username="Alfonso aguirre" imageUrl={owner.avatar_url} />
         <Body>
           <List data={state} />
         </Body>

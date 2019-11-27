@@ -7,10 +7,12 @@ const useGithub = () => {
   const [owner, setOwner] = useState({});
   const [isLoaded, setIsloaded] = useState(false);
 
+  // Get github repositories
   useEffect(() => {
     (async () => {
       const data = await fetch(PROFILE_END_POINT);
       const jsonData = await data.json();
+      // Order repo list by date ASC
       const sortedByDate = jsonData.sort((current, next) => {
         const firstDate = new Date(current.created_at);
         const nextDate = new Date(next.created_at);

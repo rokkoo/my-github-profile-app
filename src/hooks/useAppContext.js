@@ -9,7 +9,7 @@ const useAppContext = () => {
   const [state, setState] = useContext(AppContext);
   const { themeMode } = state;
 
-  // Changue theme shared prefence themeMode between light and dark themeMode
+  // Changue theme shared prefence 'themeMode' between light and dark 'themeMode'
   const toggleMode = () => {
     const selectedTheme =
       themeMode === theme.lightThemeName

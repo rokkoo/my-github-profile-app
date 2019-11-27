@@ -1,5 +1,5 @@
 export const theme = {
-  preferenceName: "theme",
+  preferenceName: "theme", // shared preference name
   lightThemeName: "light",
   darkTheName: "dark"
 };

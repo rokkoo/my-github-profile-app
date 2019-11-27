@@ -3,8 +3,6 @@ import PropTypes from "prop-types";
 
 const MODULE_NAME = "ImageModule";
 
-const ImageView = props => <ImageModule {...props} />;
-
 const viewProps = {
   name: MODULE_NAME,
   url: PropTypes.string

@@ -35,7 +35,6 @@ The application use two custom native modules, this two modules only runs in and
   - [x] ImageView UI native componente
   - [x] Shared preferences system native componente
 - [x] Consume github API (my profile).
-- [ ] Make UI.
+- [x] Make UI.
   - [x] Show list order by time ASC
-- [ ] Clean code.
-- [ ] ADD Proptypes
+- [x] Clean code.
